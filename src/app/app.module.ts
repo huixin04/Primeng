@@ -4,9 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
   ],
   imports: [
     ShareModule,
