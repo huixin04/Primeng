@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    FormComponent,
   ],
   imports: [
     ShareModule,
