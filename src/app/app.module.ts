@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FormComponent } from './form/form.component';
+import { SurveyComponent } from './survey/survey.component';
+import { TableComponent } from './table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     FormComponent,
+    SurveyComponent,
+    TableComponent,
   ],
   imports: [
     ShareModule,
