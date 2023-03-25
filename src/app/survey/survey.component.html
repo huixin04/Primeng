@@ -16,7 +16,100 @@
         </div>
       </div>
     </div>
-    <div class="col-6"></div>
-    <div class="col-6"></div>
+    <div class="row">
+      <div class="col-6">
+        <div class="flex flex-column gap-2">
+          <label>密碼</label>
+          <input pInputText />
+        </div>
+      </div>
+      <div class="col-6">
+        <p-checkbox name="groupname" value="val2" label="Angular"></p-checkbox>
+        <p-checkbox name="groupname" value="val2" label="bonita"></p-checkbox>
+        <p-checkbox name="groupname" value="val2" label="database"></p-checkbox>
+        <p-checkbox name="groupname" value="val2" label="golang"></p-checkbox>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="flex flex-column gap-2">
+          <label>確認密碼</label>
+          <input pInputText />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="flex flex-column gap-2">
+          <label>E-mail</label>
+          <input pInputText />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="inputState" class="form-label">城市</label>
+        <p-dropdown [options]="country" optionLabel="name"></p-dropdown>
+      </div>
+      <div class="col-6">
+        <label for="inputState" class="form-label">職業</label>
+        <p-dropdown [options]="porfession" optionLabel="name"></p-dropdown>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="inputState" class="form-label">填寫日期</label>
+        <p-calendar [showIcon]="true"> </p-calendar>
+      </div>
+
+      <div class="col-6">
+        <label for="inputState" class="form-label">性別</label>
+        <div class="flex flex-wrap">
+          <div class="flex align-items-center form-check-inline">
+            <p-radioButton
+              name="pizza"
+              value="女"
+              [(ngModel)]="ingredient"
+              inputId="ingredient1"
+            ></p-radioButton>
+            <label for="ingredient1" class="ml-2">女</label>
+          </div>
+
+          <div class="flex align-items-center form-check-inline">
+            <p-radioButton
+              name="pizza"
+              value="男"
+              [(ngModel)]="ingredient"
+              inputId="ingredient2"
+            ></p-radioButton>
+            <label for="ingredient2" class="ml-2">男</label>
+          </div>
+
+          <div class="flex align-items-center form-check-inline">
+            <p-radioButton
+              name="pizza"
+              value="其他"
+              [(ngModel)]="ingredient"
+              inputId="ingredient3"
+            ></p-radioButton>
+            <label for="ingredient3" class="ml-2">其他</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="inputState" class="form-label">問題/評論</label>
+        <textarea rows="2" cols="70" pInputTextarea></textarea>
+      </div>
+      <div class="col-6">
+        <div class="d-flex justify-content-end">
+          <button
+            pButton
+            pRipple
+            label="送出"
+            class="p-button-success"
+          ></button>
+        </div>
+      </div>
+    </div>
   </p-card>
 </div>

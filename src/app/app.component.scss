@@ -8,9 +8,31 @@ p-card {
   .p-card {
     border-radius: 10px;
   }
-  .p-button{
-    border-radius: 80px;
+  .p-button {
+    border-radius: 10px;
   }
+  .p-dropdown {
+    width: 100%;
+    margin: 0px 0 20px 0px;
+  }
+  .p-calendar {
+    width: 100%;
+    margin: 0px 0 20px 0px;
+  }
+
+  .flex-wrap {
+    margin-top: 1%;
+  }
+
+  p-checkbox.p-element {
+    margin-top: 7%;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .col {
+    align-items: center;
+  }
+
 }
 
 p-button,
@@ -40,4 +62,20 @@ h3 {
   padding: 0 15px;
   width: 1200px;
   max-width: 100%;
+}
+.p-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8%;
+}
+//按鈕
+.d-flex {
+  margin-top: 8%;
+}
+p-radioButton {
+  flex-direction: row;
+  margin-right: 1rem;
+  align-items: center;
+
 }
