@@ -11,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     AppRoutingModule,
     DropdownModule,
     CalendarModule,
-    RadioButtonModule
+    RadioButtonModule,
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AppComponent],
