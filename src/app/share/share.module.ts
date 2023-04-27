@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimengModule } from './primeng/primeng.module';
 import { HttpClientModule } from '@angular/common/http';
+// shared.module.ts
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [],
@@ -11,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
 
     PrimengModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class ShareModule { }

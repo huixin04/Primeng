@@ -10,13 +10,18 @@ const panelMenu: any[] = [
   },
   {
     label: 'Table',
-    icon: 'pi pi-fw pi-pencil',
+    icon: 'pi pi-fw pi-table',
     routerLink: ['/table'],
   },
   {
     label: '問卷',
     icon: 'pi pi-fw pi-pencil',
     routerLink: ['/survey'],
+  },
+  {
+    label: 'CRUD',
+    icon: 'pi pi-fw pi-database',
+    routerLink: ['/crud'],
   },
   //有下拉選單(範例)
   {

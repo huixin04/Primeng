@@ -11,6 +11,9 @@ import { TableComponent } from './table/table.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { CrudComponent } from './crud/crud.component';
+import { EditComponent } from './crud/edit/edit.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     FormComponent,
     SurveyComponent,
     TableComponent,
-  ],
+    CrudComponent,
+    EditComponent
+   ],
   imports: [
     ShareModule,
     BrowserAnimationsModule,

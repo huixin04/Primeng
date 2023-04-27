@@ -23,10 +23,28 @@ getAllRequest(page: number): Observable<any> {
   return this.http.get(url);
 }
 
+ // getOne
+ getOneRequest(id: any): Observable<any> {
+  const url = `${this.BaseUrl}/posts/${id}`;
+  return this.http.get(url);
+}
+
 //post
 postRequest(body: any): Observable<any> {
   const url = `${this.BaseUrl}/posts`;
   return this.http.post(url, body);
+}
+
+// patch修改
+patchRequest(id: any, body: any): Observable<any> {
+  const url = `${this.BaseUrl}/posts/${id}`;
+  return this.http.patch(url, body);
+}
+
+// delete
+deleteRequest(id: any): Observable<any> {
+  const url = `${this.BaseUrl}/posts/${id}`;
+  return this.http.delete(url);
 }
 
 }
