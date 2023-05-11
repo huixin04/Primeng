@@ -23,6 +23,11 @@ const panelMenu: any[] = [
     icon: 'pi pi-fw pi-database',
     routerLink: ['/crud'],
   },
+  {
+    label: '設備請購單',
+    icon: 'pi pi-fw pi-database',
+    routerLink: ['/puchase'],
+  },
   //有下拉選單(範例)
   {
     label: '社群',

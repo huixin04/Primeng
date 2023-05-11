@@ -1,0 +1,97 @@
+<div class="container">
+  <p-card>
+    <h3>設備請購單</h3>
+    <p-divider></p-divider>
+    <!-- [paginator]="true" [rows]="5" -->
+    <!-- <p-table [value]="apiData" [tableStyle]="{ 'min-width': '50rem' }"> -->
+      <!-- paginator 頁碼 -->
+    <p-table [value]="apiData" [lazy]="true" [totalRecords]="100" [rows]="10" [paginator]="false"
+            >
+      <ng-template pTemplate="caption">
+        <div class="flex flex-row-reverse flex-wrap card-container ">
+        <span class="p-buttonset">
+          <p-button (click)="addDialog()" pTooltip="新增" tooltipPosition="top" icon="pi pi-plus"
+                    styleClass="p-button-text"></p-button>
+        </span></div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>申請人</th>
+          <th>請購編號</th>
+          <th>公司名稱</th>
+          <th>請購部門</th>
+          <th>編輯</th>
+          <!-- <th>刪除</th> -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-requisition>
+        <tr>
+          <td>{{requisition.username}}</td>
+          <td>{{requisition.purchase_id}}</td>
+          <td>{{requisition.company_name}}</td>
+          <td>{{requisition.department}}</td>
+
+          <td>
+            <p-button icon="pi pi-pencil" (click)="edit2(requisition.purchase_id)"
+                      styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+          </td>
+
+        </tr>
+      </ng-template>
+    <!-- </p-table> -->
+    </p-table>
+  </p-card>
+</div>
+
+<!--Dialog-->
+<form [formGroup]="form">
+  <p-dialog [(visible)]="addData" header="新增" [style]="{ height: '600px' }">
+    <div class="formgrid grid ">
+      <div class="field col-12 md:col-6">
+
+          <label for="firstname6" >
+            <span class="p-required">*</span>
+            <span>申請人</span>
+          </label>
+          <input id="username" type="text" formControlName="username" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+      <div class="field col-12 md:col-6">
+        <dt>編號:</dt>
+        <!-- <dd>{{requisition.puchase_id }}</dd> -->
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6" >公司名稱</label>
+          <input id="company_name" type="text" formControlName="company_name"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6">請購部門</label>
+          <input id="department" type="text" formControlName="department" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6">品名</label>
+          <input id="product_name" type="text" formControlName="product_name"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6">請購數量</label>
+          <input id="purchase_quantity" type="text" formControlName="purchase_quantity" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+      </div>
+      <div class="field col-12 md:col-6">
+         <span class="p-required">*</span>
+          <label>單價</label>
+          <input id="price" type="text" formControlName="price" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+       </div>
+    </div>
+    <div class="flex flex-row-reverse flex-wrap card-container ">
+      <p-button label="取消" (click)="addData=false" styleClass="p-button-raised p-button-secondary"></p-button>
+      <p-button label="儲存" (click)="post()" styleClass="p-button-outlined"></p-button>
+    </div>
+  </p-dialog>
+</form>

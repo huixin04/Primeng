@@ -7,11 +7,12 @@
 
       <ng-template pTemplate="header">
         <tr>
-          <th>userId</th>
-          <th>id</th>
-          <th>title</th>
-          <th>body</th>
+          <th>position</th>
+          <th>Name</th>
+          <th>height</th>
+          <th>weight</th>
           <th>編輯</th>
+
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-user>
@@ -62,19 +63,19 @@
 <!--Dialog-->
 <p-dialog [(visible)]="visible" header="編輯">
   <div class="row">
-    <div class="col-6 d-flex align-item-center">
+    <div class="field col-12 md:col-6">
       <dt>編號:</dt>
       <dd>{{ data.position }}</dd>
     </div>
-    <div class="col-6">
+    <div class="field col-12 md:col-6">
       <label>姓名</label>
       <input [(ngModel)]="data.name" pInputText />
     </div>
-    <div class="col-6">
+    <div class="field col-12 md:col-6">
       <label>身高</label>
       <input [(ngModel)]="data.height" pInputText />
     </div>
-    <div class="col-6">
+    <div class="field col-12 md:col-6">
       <label>體重</label>
       <input [(ngModel)]="data.weight" pInputText />
     </div>

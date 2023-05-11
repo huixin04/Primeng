@@ -1,0 +1,61 @@
+<!--edit-crud.component.html-->
+<form [formGroup]="form">
+<div class="container">
+    <p-card>
+        <h3>編輯</h3>
+        <p-divider></p-divider>
+        <div class="formgrid grid">
+        <div class="field col-12 md:col-6">
+
+          <label for="firstname6" >
+            <span class="p-required">*</span>
+            <label for="firstname6">申請人</label>
+          </label>
+          <input id="username" type="text" formControlName="username" class="text-base  surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full ">
+      </div>
+      <div class="field col-12 md:col-6">
+        <dt>編號:</dt>
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6">公司名稱</label>
+          <input id="company_name" type="text" formControlName="company_name"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6">請購部門</label>
+          <input id="department" type="text" formControlName="department" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6" >品名</label>
+          <input id="product_name" type="text" formControlName="product_name" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+
+      </div>
+      <div class="field col-12 md:col-6">
+          <span class="p-required">*</span>
+          <label for="firstname6">請購數量</label>
+          <input id="purchase_quantity" type="text" formControlName="purchase_quantity"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+
+      </div>
+      <div class="field col-12 md:col-6">
+         <span class="p-required">*</span>
+          <label>單價</label>
+          <input id="price" type="text" formControlName="price"   class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+       </div>
+      </div>
+        <div class="flex flex-row-reverse flex-wrap card-container">
+          <p-button label="取消" routerLink="/puchase" styleClass="p-button-raised p-button-secondary"></p-button>
+          <p-button label="刪除" (click)="delete()" styleClass="p-button-outlined p-button-danger"></p-button>
+          <p-button label="儲存" (click)="patch()" styleClass="p-button-outlined"></p-button>
+
+
+        </div>
+
+    </p-card>
+
+</div>
+</form>

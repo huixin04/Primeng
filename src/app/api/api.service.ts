@@ -10,7 +10,7 @@ export class ApiService {
   private BaseUrl: string = 'https://jsonplaceholder.typicode.com';
   constructor(private http: HttpClient) { }
 
-  //get
+//get
 //   getAllRequest(): Observable<any> {
 //     //https://jsonplaceholder.typicode.com
 //   const url = `${this.BaseUrl}/posts`;

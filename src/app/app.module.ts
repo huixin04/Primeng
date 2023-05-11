@@ -13,6 +13,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CrudComponent } from './crud/crud.component';
 import { EditComponent } from './crud/edit/edit.component';
+import { PuchaseComponent } from './puchase/puchase.component';
+import { Edit2Component } from './puchase/edit2/edit2.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { EditComponent } from './crud/edit/edit.component';
     SurveyComponent,
     TableComponent,
     CrudComponent,
-    EditComponent
+    EditComponent,
+    PuchaseComponent,
+    Edit2Component
    ],
   imports: [
     ShareModule,
