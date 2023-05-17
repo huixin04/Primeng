@@ -22,13 +22,14 @@ export class Edit2Component {
     this.form = this.fb.group({
       //必填
       username: ['',[Validators.required]],
-      purchase_id: ['', ],
+      //purchase_id: ['', ],
+      code:['', ],
       company_name: ['',[Validators.required]],
       department: ['',[Validators.required]],
       product_name:['',[Validators.required]],
       purchase_quantity:['',[Validators.required]],
       price:['',[Validators.required]],
-      ceated_by:['',[Validators.required]]
+      created_by:['',[Validators.required]]
     });
   }
   purchase_id: any;
@@ -60,8 +61,8 @@ export class Edit2Component {
       department: this.form.controls['department'].value,
       product_name: this.form.controls['product_name'].value,
       purchase_quantity:Number( this.form.controls['purchase_quantity'].value),
-      price: Number(this.form.controls['price'].value)
-
+      price: Number(this.form.controls['price'].value),
+      created_by: this.form.controls['created_by'].value,
     }
     this.HttpApi.patchPurchaseRequest(purchase_id, body)
       .subscribe(request => {
@@ -74,7 +75,7 @@ export class Edit2Component {
 
   // edit-crud.component.ts
   delete(): void {
-    let puchase_id = this.form.controls['purchase_id'].value
+    let puchase_id = this.purchase_id
     this.HttpApi.deletePurchaseRequest(puchase_id).subscribe(request => {
       console.log(request)
       if(request.code == 200){

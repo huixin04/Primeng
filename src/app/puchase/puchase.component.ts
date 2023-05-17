@@ -7,15 +7,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 // import { FormControl } from '@angular/forms';
 import {Router} from "@angular/router";
 
-// interface requisition {
-//   name: string;
-//   puchase_id: string;
-//   company:string;
-//   department:string;
-//   product_name:string;
-//   quantity:number;
-//   price:number;
-// }
+
 
 @Component({
   selector: 'app-puchase',
@@ -38,14 +30,14 @@ export class PuchaseComponent {
         //必填
 
         username: ['',[Validators.required]],
-        purchase_code: ['', ],
+        code: ['', ],
         purchase_id:['',],
         company_name: ['',[Validators.required]],
         department: ['',[Validators.required]],
         product_name:['',[Validators.required]],
         purchase_quantity:['',[Validators.required]],
         price:['',[Validators.required]],
-        ceated_by:['',[Validators.required]]
+        created_by:['',[Validators.required]]
       });
    }}
 
@@ -78,16 +70,17 @@ post(): void {
   let body = {
     // 另title(要post的欄位) = 表單控制元件'title'的值
       username: this.form.value.username,
-      purchase_code: this.form.value.purchase_code,
+      code: this.form.value.code,
       company_name: this.form.value.company_name,
       department: this.form.value.department,
       product_name: this.form.value.product_name,
       purchase_quantity: Number(this.form.value.purchase_quantity),
       price: Number(this.form.value.price),
+      created_by: this.form.value.ceated_by,
   }
   // 請求post api
   this.HttpApi.postPurchaseRequest(body)
-    .subscribe((request: any) => {
+    .subscribe(request => {
       console.log(request)
       if(request.code == 200){
         this.addData=false;

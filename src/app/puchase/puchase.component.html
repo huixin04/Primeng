@@ -27,7 +27,7 @@
       <ng-template pTemplate="body" let-requisition>
         <tr>
           <td>{{requisition.username}}</td>
-          <td>{{requisition.purchase_id}}</td>
+          <td>{{requisition.code}}</td>
           <td>{{requisition.company_name}}</td>
           <td>{{requisition.department}}</td>
 
@@ -57,7 +57,7 @@
       </div>
       <div class="field col-12 md:col-6">
         <dt>編號:</dt>
-        <!-- <dd>{{requisition.puchase_id }}</dd> -->
+        <dd>{{(form.controls['code'].value )}}</dd>
       </div>
       <div class="field col-12 md:col-6">
           <span class="p-required">*</span>
@@ -88,6 +88,11 @@
           <label>單價</label>
           <input id="price" type="text" formControlName="price" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
        </div>
+       <div class="field col-12 md:col-6">
+        <span class="p-required">*</span>
+         <label>創建者</label>
+         <input id="created_by" type="text" formControlName="created_by" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
     </div>
     <div class="flex flex-row-reverse flex-wrap card-container ">
       <p-button label="取消" (click)="addData=false" styleClass="p-button-raised p-button-secondary"></p-button>
