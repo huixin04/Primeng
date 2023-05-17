@@ -6,7 +6,7 @@
     <p-table [value]="apiData" [lazy]="true" [totalRecords]="100" [rows]="10" [paginator]="true"
              (onLazyLoad)="loadPostsLazy($event)">
       <ng-template pTemplate="caption">
-        <div class="d-flex justify-content-end">
+        <div class="flex flex-row-reverse flex-wrap card-container ">
         <span class="p-buttonset">
           <p-button (click)="addData=true" pTooltip="新增" tooltipPosition="top" icon="pi pi-plus"
                     styleClass="p-button-text"></p-button>
